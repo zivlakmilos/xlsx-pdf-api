@@ -1,0 +1,24 @@
+{
+  "name": "xlsx-pdf-api",
+  "version": "1.0.0",
+  "description": "Convert XLSX to PDF NodeJS API",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zivlakmilos/xlsx-pdf-api.git"
+  },
+  "keywords": [
+    "xlsx",
+    "pdf",
+    "api"
+  ],
+  "author": "Milos Zivlak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zivlakmilos/xlsx-pdf-api/issues"
+  },
+  "homepage": "https://github.com/zivlakmilos/xlsx-pdf-api#readme"
+}

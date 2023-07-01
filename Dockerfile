@@ -1,8 +1,8 @@
-FROM python:3-alpine
+FROM node:18-alpine
 
-RUN apk add build-base
-RUN pip3 install aspose-cells flask
-WORKDIR  /app
+WORKDIR  /home/node/app
+COPY package.json package-lock.json ./
+RUN npm install --production
 COPY . .
 
-CMD ["python", "server.py"]
+CMD ["npm", "start"]
