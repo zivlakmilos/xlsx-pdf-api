@@ -8,7 +8,8 @@ import libre from 'libreoffice-convert';
 const pump = util.promisify(pipeline);
 libre.convertAsync = util.promisify(libre.convert);
 
-const PORT = process.env.port || 8080
+const HOST = process.env.port || '0.0.0.0';
+const PORT = process.env.port || 8080;
 const UPLOAD_DIR = '/tmp';
 
 const convert = async (inputPath) => {
@@ -38,4 +39,4 @@ app.post('/api/convert', async (req, res) => {
   res.send(pdf).type('application/pdf').code(200);
 });
 
-app.listen({ port: PORT });
+app.listen({ port: PORT, host: HOST, });
