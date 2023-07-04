@@ -33,6 +33,8 @@ app.post('/api/convert', async (req, res) => {
   fs.rmSync(filePath);
 
   res.header('Content-Type', 'application/pdf');
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "POST");
   res.send(pdf).type('application/pdf').code(200);
 });
 
